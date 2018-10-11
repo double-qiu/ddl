@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ddl.common</groupId>
+    <artifactId>ddl-common</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>ddl-common-utils</artifactId>
+  <name>ddl-common-utils</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <commons-lang3.version>3.3.2</commons-lang3.version>
+    <guava.version>19.0</guava.version>
+    <jsoup.version>1.9.1</jsoup.version>
+  </properties>
+  <dependencies>
+    <!-- utils -->
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+		<version>${commons-lang3.version}</version>
+		<optional>true</optional>
+	</dependency>
+	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>${guava.version}</version>
+		<optional>true</optional>
+	</dependency>
+	<dependency>
+		<groupId>org.jsoup</groupId>
+		<artifactId>jsoup</artifactId>
+		<version>${jsoup.version}</version>
+		<optional>true</optional>
+	</dependency>
+  </dependencies>
+</project>

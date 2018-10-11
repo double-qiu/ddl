@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+spring:
+    datasource:
+        name: test
+        url: jdbc:mysql://127.0.0.1:3306/ddl?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+        username: root
+        password: root
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        maxActive: 100
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        maxIdle: 100
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 100
+        
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:sqlmap/*.xml
+  type-aliases-package: com.ddl.basic.domain.entity
+
+ddl:
+  mobileUrl: http://apis.juhe.cn/mobile/get
+  mobileKey: fd6ce6babd1ef065ae2b9e29406645bf
+
+logging:
+    level:
+      com.ddl: debug
+      springfox.documentation: error
+#pagehelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
